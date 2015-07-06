@@ -62,7 +62,6 @@ heroku run python
 from app import db
 db.create_all()
 quit()
-heroku run python addTables.py
 ```
 Subsequent times
 ```
