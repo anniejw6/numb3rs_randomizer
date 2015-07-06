@@ -2,7 +2,7 @@
 
 A flask application to help implement randomization for a Numb3rs-themed drinking game
 
-Production: [numb3rs-rand-pro.herokuapp.com](http://numb3rs-rand-pro.herokuapp.com/) (In theory, this should always work.)
+Production: [numb3rs-rand.herokuapp.com](http://numb3rs-rand.herokuapp.com/) (In theory, this should always work.)
 
 Staging: [numb3rs-rand-stage.herokuapp.com](http://numb3rs-rand-stage.herokuapp.com/) (Probably is broken.)
 
@@ -56,7 +56,7 @@ git remote add REMOTE_NAME git@heroku.com:APP_NAME.git
 First time you push
 ```
 git push REMOTE_NAME master
-heroku addons:add heroku-postgresql:dev
+heroku addons:create heroku-postgresql:hobby-dev
 heroku pg:promote HEROKU_POSTGRESQL_COLOR
 heroku run python
 from app import db
