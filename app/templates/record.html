@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block script %}
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+{% endblock %}
+
+{% block page_head %}
+Record Errors
+{% endblock %}
+
+{% block content %}
+
+<script src="{{ url_for('static', filename = 'js/spinner.js') }}"></script> 
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12">
+    <p>Record how many instances of inaccurate or implausible math you spot. </p>
+      <div class="input-group number-spinner">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-lg" data-dir="dwn"><span class="glyphicon glyphicon-minus"></span></button>
+        </span>
+        <input type="text" class="form-control text-center input-lg" value="0">
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-lg" data-dir="up"><span class="glyphicon glyphicon-plus"></span></button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class = 'row'>
+    <div class="col-xs-12">
+    <p>Write your notes on them here</p>
+    <textarea id ="errnotes" class="form-control" style="min-width: 100%" rows="7"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class = 'submit'>
+      <form  action="{{ url_for('index') }}">
+        <center>
+         <button class="btn btn-default btn-lg" type = "submit">Submit</button> 
+         </center></form>
+       </div>
+     </div>
+   </div>
+
+ </div>
+ {% endblock %}
